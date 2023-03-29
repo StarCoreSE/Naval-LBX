@@ -2000,7 +2000,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "LBXCluster_Fragment", // AmmoRound field of the ammo to spawn.
-                Fragments = 12, // Number of projectiles to spawn.
+                Fragments = 7, // Number of projectiles to spawn.
                 Degrees = 2f, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = false, // fragments will not inherit velocity from parent.
@@ -2017,7 +2017,7 @@ namespace Scripts
                     MaxSpawns = 1, // Max number of fragment children to spawn
                     Proximity = 1100, // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
                     ParentDies = true, // Parent dies once after it spawns its last child.
-                    PointAtTarget = true, // Start fragment direction pointing at Target
+                    PointAtTarget = false, // Start fragment direction pointing at Target
                     PointType = Direct, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
                     DirectAimCone = 0f, //Aim cone used for Direct fire, in degrees
                     GroupSize = 1, // Number of spawns in each group
@@ -2397,7 +2397,7 @@ namespace Scripts
                 AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
                 TimedSpawns = new TimedSpawnDef // disables FragOnEnd in favor of info specified below
                 {
-                    Enable = true, // Enables TimedSpawns mechanism
+                    Enable = false, // Enables TimedSpawns mechanism
                     Interval = 0, // Time between spawning fragments, in ticks, 0 means every tick, 1 means every other
                     StartTime = 0, // Time delay to start spawning fragments, in ticks, of total projectile life
                     MaxSpawns = 6, // Max number of fragment children to spawn
@@ -2585,7 +2585,7 @@ namespace Scripts
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
+                Guidance = None, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 0f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 325, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.

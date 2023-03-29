@@ -39,9 +39,9 @@ namespace Scripts {
                     Grids, Neutrals, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals
                 },
                 SubSystems = new[] {
-                    Offense, Power, Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
+                    Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
                 },
-                ClosestFirst = true, // Tries to pick closest targets first (blocks on grids, projectiles, etc...).
+                ClosestFirst = false, // Tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // Minimum radius of threat to engage.
@@ -108,7 +108,7 @@ namespace Scripts {
                     ConstructPartCap = 0, // Maximum number of blocks with this weapon on a grid; 0 = unlimited.
                     RotateBarrelAxis = 0, // For spinning barrels, which axis to spin the barrel around; 0 = none.
                     EnergyPriority = 0, // Deprecated.
-                    MuzzleCheck = true, // Whether the weapon should check LOS from each individual muzzle in addition to the scope.
+                    MuzzleCheck = false, // Whether the weapon should check LOS from each individual muzzle in addition to the scope.
                     Debug = false, // Force enables debug mode.
                     RestrictionRadius = 0, // Prevents other blocks of this type from being placed within this distance of the centre of the block.
                     CheckInflatedBox = false, // If true, the above distance check is performed from the edge of the block instead of the centre.
@@ -190,7 +190,6 @@ namespace Scripts {
                 Shrap_Frag_LBX5_HighExplosive,
                 LBX5_Cluster,
                 Frag_LBX5_Cluster,
-                LBX5_Cluster_Canister,
                 The_Frag_for_the_Shrap_for_the_Frag_of_the_LBX5_HighExplosive,
                  // Must list all primary, shrapnel, and pattern ammos.
 
