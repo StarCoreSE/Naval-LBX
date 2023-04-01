@@ -38,7 +38,7 @@ namespace Scripts
             EnergyCost = 2f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
             BaseDamage = 6000f, // Direct damage; one steel plate is worth 100.
             Mass = 40000f, // In kilograms; how much force the impact will apply to the target.
-            Health = 40, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+            Health = 800, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 41000000f, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
@@ -127,7 +127,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 10f, // Multiplier for damage against shields.
+                    Modifier = 12f, // Multiplier for damage against shields.
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f, // If greater than zero, the percentage of damage that will penetrate the shield.
                 },
@@ -177,8 +177,8 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 6f, // Radius of AOE effect, in meters.
-                    Damage = 51000f,
+                    Radius = 5f, // Radius of AOE effect, in meters.
+                    Damage = 55000f,
                     Depth = 0f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = NoFalloff, //.NoFalloff applies the same damage to all blocks in radius
@@ -426,8 +426,8 @@ namespace Scripts
             EnergyCost = 1f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
             BaseDamage = 16001f, // Direct damage; one steel plate is worth 100.
             Mass = 1100f, // In kilograms; how much force the impact will apply to the target.
-            Health = 40, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
-            BackKickForce = 10000000f, // Recoil. This is applied to the Parent Grid.
+            Health = 800, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+            BackKickForce = 27770000f, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
                                //If greater than cube integrity it will remove the cube upon firing, without causing deformation (makes it look like the whole "block" flew away)
@@ -450,7 +450,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "Frag High Explosive", // AmmoRound field of the ammo to spawn.
-                Fragments = 45, // Cone in which to randomize direction of spawned projectiles.
+                Fragments = 37, // Cone in which to randomize direction of spawned projectiles.
                 Degrees = 360, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = true, // fragments will not inherit velocity from parent.
@@ -838,7 +838,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "Shrap Frag High Explosive", // AmmoRound field of the ammo to spawn.
-                Fragments = 6, // Number of projectiles to spawn.
+                Fragments = 5, // Number of projectiles to spawn.
                 Degrees = 360, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = true, // fragments will not inherit velocity from parent.
@@ -1978,8 +1978,8 @@ namespace Scripts
             EnergyCost = 0.2f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
             BaseDamage = 40400f, // Direct damage; one steel plate is worth 100.
             Mass = 20000f, // In kilograms; how much force the impact will apply to the target.
-            Health = 40, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
-            BackKickForce = 1000000f, // Recoil. This is applied to the Parent Grid.
+            Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+            BackKickForce = 27770000f, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself.
             HardPointUsable = true, // Whether this is a primary ammo type fired directly by the turret. Set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             EnergyMagazineSize = 1, // For energy weapons, how many shots to fire before reloading.
@@ -2005,7 +2005,7 @@ namespace Scripts
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = false, // fragments will not inherit velocity from parent.
                 Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
-                Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
+                Radial = 0.5f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
                 MaxChildren = 0, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
                 IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
                 AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
@@ -2364,7 +2364,7 @@ namespace Scripts
             EnergyCost = 0.2f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
             BaseDamage = 40400f, // Direct damage; one steel plate is worth 100.
             Mass = 10000f, // In kilograms; how much force the impact will apply to the target.
-            Health = 40, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+            Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 1000000f, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself.
             HardPointUsable = false, // Whether this is a primary ammo type fired directly by the turret. Set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
