@@ -2832,7 +2832,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 8.157f, // Multiplier for damage against shields.
+                    Modifier = 9f, // Multiplier for damage against shields.
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f, // If greater than zero, the percentage of damage that will penetrate the shield.
                 },
@@ -2895,7 +2895,7 @@ namespace Scripts
                     //.Exponential drops off exponentially.  Does not scale to max radius
                     ArmOnlyOnHit = true, // Detonation only is available, After it hits something, when this is true. IE, if shot down, it won't explode.
                     MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
-                    NoVisuals = true,
+                    NoVisuals = false,
                     NoSound = false,
                     ParticleScale = 2.5f,
                     CustomParticle = "LBX_Explosion", // Particle SubtypeID, from your Particle SBC
