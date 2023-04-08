@@ -6267,22 +6267,22 @@
               <Keys>
                 <Key>
                   <Time>0.005316321</Time>
-                  <ValueFloat>150</ValueFloat>
+                  <ValueFloat>15</ValueFloat>
                   <Value2D />
                 </Key>
                 <Key>
                   <Time>0.05103668</Time>
-                  <ValueFloat>100</ValueFloat>
+                  <ValueFloat>10</ValueFloat>
                   <Value2D />
                 </Key>
                 <Key>
                   <Time>0.1148325</Time>
-                  <ValueFloat>30</ValueFloat>
+                  <ValueFloat>3</ValueFloat>
                   <Value2D />
                 </Key>
                 <Key>
                   <Time>0.2222222</Time>
-                  <ValueFloat>10</ValueFloat>
+                  <ValueFloat>1</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -6981,6 +6981,7 @@
       <DistanceMax>7000</DistanceMax>
       <Priority>1</Priority>
     </ParticleEffect>
+	
 
 	<ParticleEffect xsi:type="ParticleEffect">
 		  <Id Type="MyObjectBuilder_ParticleEffect" Subtype="LBX_Muzzle_Flash_MediumCalibre" />
