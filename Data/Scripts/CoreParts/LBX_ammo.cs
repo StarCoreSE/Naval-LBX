@@ -2001,11 +2001,11 @@ namespace Scripts
             {
                 AmmoRound = "LBXCluster_Fragment", // AmmoRound field of the ammo to spawn.
                 Fragments = 7, // Number of projectiles to spawn.
-                Degrees = 3f, // Cone in which to randomize direction of spawned projectiles.
+                Degrees = 100f, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = false, // fragments will not inherit velocity from parent.
                 Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
-                Radial = 0.75f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
+                Radial = 100f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
                 MaxChildren = 0, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
                 IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
                 AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
@@ -3008,7 +3008,7 @@ namespace Scripts
             },
             AmmoGraphics = new GraphicDef
             {
-                ModelName = "", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
+                ModelName = "\\Models\\Ammo\\LBX5_AmmoShellShotgun.mwm", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
                 VisualProbability = 1f, // %
                 ShieldHitDraw = false,
                 Particles = new AmmoParticleDef
@@ -3047,14 +3047,14 @@ namespace Scripts
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 0f, end: 0f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 60f, //
-                        Width = 0.8f, //
-                        Color = Color(red: 6, green: 6, blue: 7f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        Length = 500f, //
+                        Width = 2f, //
+                        Color = Color(red: 4, green: 4, blue: 5f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
@@ -3080,13 +3080,13 @@ namespace Scripts
                     },
                     Trail = new TrailDef
                     {
-                        Enable = false,
+                        Enable = true,
                         Textures = new[] {
-                            "", // Please always have this Line set, if this Section is enabled.
+                            "ProjectileTrailLine", // Please always have this Line set, if this Section is enabled.
                         },
                         TextureMode = Normal,
-                        DecayTime = 3, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
-                        Color = Color(red: 0, green: 0, blue: 1, alpha: 1),
+                        DecayTime = 2, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
+                        Color = Color(red: 4, green: 4, blue: 5, alpha: 1),
                         Back = false,
                         CustomWidth = 0,
                         UseWidthVariance = false,
