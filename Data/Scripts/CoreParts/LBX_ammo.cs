@@ -3052,9 +3052,9 @@ namespace Scripts
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 15f, //
-                        Width = 0.4f, //
-                        Color = Color(red: 12, green: 12, blue: 14f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        Length = 60f, //
+                        Width = 0.8f, //
+                        Color = Color(red: 6, green: 6, blue: 7f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
