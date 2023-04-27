@@ -339,14 +339,14 @@ namespace Scripts
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
+                    ColorVariance = Random(start: 0.5f, end: 0.8f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
                         Length = 60f, //
                         Width = 1.5f, //
-                        Color = Color(red: 20, green: 10, blue: 10f, alpha: 0.5f), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        Color = Color(red: 30, green: 10, blue: 10f, alpha: 0.7f), // RBG 255 is Neon Glowing, 100 is Quite Bright.
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
@@ -377,10 +377,10 @@ namespace Scripts
                             "WeaponLaser", // Please always have this Line set, if this Section is enabled.
                         },
                         TextureMode = Normal,
-                        DecayTime = 30, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
-                        Color = Color(red: 5, green: 5, blue: 6, alpha: 0.3f),
+                        DecayTime = 45, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
+                        Color = Color(red: 5, green: 5, blue: 6, alpha: 0.5f),
                         Back = false,
-                        CustomWidth = 3,
+                        CustomWidth = 2,
                         UseWidthVariance = false,
                         UseColorFade = true,
                     },
@@ -727,14 +727,14 @@ namespace Scripts
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
-                    WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
+                    ColorVariance = Random(start: 0.5f, end: 0.8f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 0.1f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
                         Length = 50f, //
                         Width = 2.5f, //
-                        Color = Color(red: 20, green: 15, blue: 10f, alpha: 0.5f), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        Color = Color(red: 20, green: 25, blue: 15f, alpha: 0.7f), // RBG 255 is Neon Glowing, 100 is Quite Bright.
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
@@ -765,10 +765,10 @@ namespace Scripts
                             "WeaponLaser", // Please always have this Line set, if this Section is enabled.
                         },
                         TextureMode = Normal,
-                        DecayTime = 20, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
+                        DecayTime = 45, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
                         Color = Color(red: 10, green: 10, blue: 11, alpha: 0.1f),
                         Back = false,
-                        CustomWidth = 3,
+                        CustomWidth = 2,
                         UseWidthVariance = false,
                         UseColorFade = true,
                     },
@@ -3054,7 +3054,7 @@ namespace Scripts
                         Enable = true,
                         Length = 500f, //
                         Width = 2f, //
-                        Color = Color(red: 4, green: 4, blue: 5f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        Color = Color(red: 44f, green: 55f, blue: 55f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
@@ -3081,14 +3081,11 @@ namespace Scripts
                     Trail = new TrailDef
                     {
                         Enable = true,
-                        Textures = new[] {
-                            "ProjectileTrailLine", // Please always have this Line set, if this Section is enabled.
-                        },
-                        TextureMode = Normal,
-                        DecayTime = 2, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
-                        Color = Color(red: 4, green: 4, blue: 5, alpha: 1),
+                        Material = "WeaponLaser",
+                        DecayTime = 15,
+                        Color = Color(red: 5f, green: 5f, blue: 5f, alpha: 0.5f),
                         Back = false,
-                        CustomWidth = 0,
+                        CustomWidth = 0.8f,
                         UseWidthVariance = false,
                         UseColorFade = true,
                     },
