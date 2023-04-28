@@ -307,7 +307,7 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "My_LBX_Shot", //ShipWelderArc
+                        Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
@@ -695,7 +695,7 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "My_LBX_Shot", //ShipWelderArc
+                        Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
@@ -2245,7 +2245,7 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "My_LBX_Shot", //ShipWelderArc
+                        Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
@@ -2631,7 +2631,7 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "My_LBX_Shot", //ShipWelderArc
+                        Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
@@ -3402,7 +3402,7 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "My_LBX_Shot", //ShipWelderArc
+                        Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
