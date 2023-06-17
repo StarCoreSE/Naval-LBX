@@ -184,7 +184,7 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                 // LBX5_Slug,
+                LBX5_Slug,
                 LBX5_HighExplosive,
                 Frag_LBX5_HighExplosive,
                 Shrap_Frag_LBX5_HighExplosive,
