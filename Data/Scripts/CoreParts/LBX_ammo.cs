@@ -1029,7 +1029,7 @@ namespace Scripts
             },
             Beams = new BeamDef
             {
-                Enable = false, // Enable beam behaviour. Please have 3600 RPM, when this Setting is enabled. Please do not fire Beams into Voxels.
+                Enable = true, // Enable beam behaviour. Please have 3600 RPM, when this Setting is enabled. Please do not fire Beams into Voxels.
                 VirtualBeams = false, // Only one damaging beam, but with the effectiveness of the visual beams combined (better performance).
                 ConvergeBeams = false, // When using virtual beams, converge the visual beams to the location of the real beam.
                 RotateRealBeam = false, // The real beam is rotated between all visual beams, instead of centered between them.
@@ -1083,11 +1083,11 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "LBX_Cheaper_Smoke", //ShipWelderArc
+                        Name = "", //ShipWelderArc LBX_Cheaper_Smoke
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 2f,
+                            Scale = 1f,
                         },
                     },
                     Hit = new ParticleDef

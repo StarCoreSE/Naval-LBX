@@ -13,27 +13,36 @@ namespace Scripts
     partial class Parts
     {
         // Don't edit above this line 
-        WeaponDefinition Weapon75 => new WeaponDefinition
+        WeaponDefinition WeaponThagomizer => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "JN_175Fixed", // Block Subtypeid. Your Cubeblocks contain this information
+                        SubtypeId = "Thagomizer", // Block Subtypeid. Your Cubeblocks contain this information
                         SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
                         MuzzlePartId = "None", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
                         AzimuthPartId = "None", // Your Rotating Subpart, the bit that moves sideways.
                         ElevationPartId = "None",// Your Elevating Subpart, that bit that moves up.
                         DurabilityMod = 0.25f, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
-                        IconName = "LBX5.dds" // Overlay for block inventory slots, like reactors, refineries, etc.
+                        IconName = "RLX10.dds" // Overlay for block inventory slots, like reactors, refineries, etc.
+                    },
+                    new MountPointDef {
+                        SubtypeId = "Thagomizer_Angled", // Block Subtypeid. Your Cubeblocks contain this information
+                        SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
+                        MuzzlePartId = "None", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
+                        AzimuthPartId = "None", // Your Rotating Subpart, the bit that moves sideways.
+                        ElevationPartId = "None",// Your Elevating Subpart, that bit that moves up.
+                        DurabilityMod = 0.25f, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
+                        IconName = "aRLX10.dds" // Overlay for block inventory slots, like reactors, refineries, etc.
                     },
 
                  },
                 Muzzles = new[] {
-                    "muzzle_01", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
+                    "Muzzle_01", "Muzzle_02", "Muzzle_03", "Muzzle_04", "Muzzle_05", "Muzzle_06", "Muzzle_07", "Muzzle_08", "Muzzle_09", "Muzzle_10", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
                 },
                 Ejector = "", // Optional; empty from which to eject "shells" if specified.
-                Scope = "muzzle_01", // Where line of sight checks are performed from. Must be clear of block collision.
+                Scope = "Muzzle_05", // Where line of sight checks are performed from. Must be clear of block collision.
             },
             Targeting = new TargetingDef
             {
@@ -41,7 +50,7 @@ namespace Scripts
                     Grids, Neutrals, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals
                 },
                 SubSystems = new[] {
-                    Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
+                    Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
                 },
                 ClosestFirst = false, // Tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
@@ -49,16 +58,16 @@ namespace Scripts
                 MinimumDiameter = 0, // Minimum radius of threat to engage.
                 MaximumDiameter = 0, // Maximum radius of threat to engage; 0 = unlimited.
                 MinTargetDistance = 0, // Minimum distance at which targets will be automatically shot at.
-                MaxTargetDistance = 0, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
-                TopTargets = 4, // Maximum number of targets to randomize between; 0 = unlimited.
-                TopBlocks = 16, // Maximum number of blocks to randomize between; 0 = unlimited.
+                MaxTargetDistance = 15000, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
+                TopTargets = 24, // Maximum number of targets to randomize between; 0 = unlimited.
+                TopBlocks = 48, // Maximum number of blocks to randomize between; 0 = unlimited.
                 StopTrackingSpeed = 0, // Do not track threats traveling faster than this speed; 0 = unlimited.
             },
             HardPoint = new HardPointDef
             {
-                PartName = "LB-5X Super", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 0.05f, // Projectile inaccuracy in degrees.
-                AimingTolerance = 0f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
+                PartName = "RL-10x Super", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                DeviateShotAngle = 1f, // Projectile inaccuracy in degrees.
+                AimingTolerance = 180f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Accurate, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
                 AddToleranceToTracking = true, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
@@ -73,10 +82,10 @@ namespace Scripts
                 },
                 Ai = new AiDef
                 {
-                    TrackTargets = false, // Whether this weapon tracks its own targets, or (for multiweapons) relies on the weapon with PrimaryTracking enabled for target designation. Turrets Need this set to True.
+                    TrackTargets = true, // Whether this weapon tracks its own targets, or (for multiweapons) relies on the weapon with PrimaryTracking enabled for target designation. Turrets Need this set to True.
                     TurretAttached = false, // Whether this weapon is a turret and should have the UI and API options for such. Turrets Need this set to True.
                     TurretController = false, // Whether this weapon can physically control the turret's movement. Turrets Need this set to True.
-                    PrimaryTracking = false, // For multiweapons: whether this weapon should designate targets for other weapons on the platform without their own tracking.
+                    PrimaryTracking = true, // For multiweapons: whether this weapon should designate targets for other weapons on the platform without their own tracking.
                     LockOnFocus = false, // If enabled, weapon will only fire at targets that have been HUD selected AND locked onto by pressing Numpad 0.
                     SuppressFire = false, // If enabled, weapon can only be fired manually.
                     OverrideLeads = false, // Disable target leading on fixed weapons, or allow it for turrets.
@@ -118,19 +127,19 @@ namespace Scripts
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 7, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
+                    RateOfFire = 500, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = 570, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    MagsToLoad = 1, // Number of physical magazines to consume on reload.
+                    ReloadTime = 900, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    MagsToLoad = 10, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 94, // Heat generated per shot.
+                    HeatPerShot = 10, // Heat generated per shot.
                     MaxHeat = 100, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = 0.35f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
                     HeatSinkRate = 10, // Amount of heat lost per second.
-                    DegradeRof = false, // Progressively lower rate of fire when over 80% heat threshold (80% of max heat).
-                    ShotsInBurst = 1, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
+                    DegradeRof = true, // Progressively lower rate of fire when over 80% heat threshold (80% of max heat).
+                    ShotsInBurst = 5, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFull = true, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
                     GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
@@ -144,7 +153,7 @@ namespace Scripts
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "", // Audio for warmup effect.
-                    FiringSound = "LBXLargeCalibreShot", // Audio for firing.
+                    FiringSound = "RLXLargeShot", // Audio for firing.
                     FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
                     ReloadSound = "LBXreload", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "ShipGatlingNoAmmo",
@@ -164,7 +173,7 @@ namespace Scripts
                         {
                             Loop = false, // Set this to the same as in the particle sbc!
                             Restart = false, // Whether to end a looping effect instantly when firing stops.
-                            MaxDistance = 4000, // Max distance at which this effect should be visible. NOTE: This will use whichever MaxDistance value is higher across Effect1 and Effect2!
+                            MaxDistance = 5000, // Max distance at which this effect should be visible. NOTE: This will use whichever MaxDistance value is higher across Effect1 and Effect2!
                             MaxDuration = 360, // How many ticks the effect should be ended after, if it's still running.
                             Scale = 2f, // Scale of effect.
                         },
@@ -186,17 +195,12 @@ namespace Scripts
                 },
             },
             Ammos = new[] {
-                 // LBX5_Slug,
-                LBX5_HighExplosive,
-                Frag_LBX5_HighExplosive,
-                Shrap_Frag_LBX5_HighExplosive,
-                LBX5_Cluster,
-                Frag_LBX5_Cluster,
-                The_Frag_for_the_Shrap_for_the_Frag_of_the_LBX5_HighExplosive,
+                LRX_Heavy,
+                LRX_Heavy_G,
                  // Must list all primary, shrapnel, and pattern ammos.
 
             },
-            Animations = LBX5_Animation,
+            //Animations = LBX5_Animation,
             //Upgrades = UpgradeModules,
         };
 

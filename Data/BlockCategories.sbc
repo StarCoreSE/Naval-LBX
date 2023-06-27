@@ -13,17 +13,6 @@
       </ItemIds>
     </Category>  
 
-	<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
-      <Id>
-        <TypeId>GuiBlockCategoryDefinition</TypeId>
-        <SubtypeId/>
-      </Id>
-      <DisplayName>CoreThread</DisplayName>
-      <Name>CoreThread</Name>
-      <ItemIds>
-			<string>ConveyorSorter/JN_175Fixed</string>
-      </ItemIds>
-    </Category> 
         <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
             <Id>
                 <TypeId>GuiBlockCategoryDefinition</TypeId>
@@ -34,7 +23,56 @@
             <ItemIds>
                 <string>ConveyorSorter/JN_175Fixed</string>
 			</ItemIds>
-        </Category>  
+        </Category>
+	  
+	  <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+		  <Id>
+			  <TypeId>GuiBlockCategoryDefinition</TypeId>
+			  <SubtypeId/>
+		  </Id>
+		  <DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+		  <Name>LargeBlocks</Name>
+		  <ItemIds>
+			  <string>ConveyorSorter/Thagomizer</string>
+		  </ItemIds>
+	  </Category>
 
-</CategoryClasses>
+
+	  <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+		  <Id>
+			  <TypeId>GuiBlockCategoryDefinition</TypeId>
+			  <SubtypeId/>
+		  </Id>
+		  <DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+		  <Name>Weapons</Name>
+		  <ItemIds>
+			  <string>ConveyorSorter/Thagomizer</string>
+		  </ItemIds>
+	  </Category>
+
+	  <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+		  <Id>
+			  <TypeId>GuiBlockCategoryDefinition</TypeId>
+			  <SubtypeId/>
+		  </Id>
+		  <DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+		  <Name>LargeBlocks</Name>
+		  <ItemIds>
+			  <string>ConveyorSorter/Thagomizer_Angled</string>
+		  </ItemIds>
+	  </Category>
+
+
+	  <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+		  <Id>
+			  <TypeId>GuiBlockCategoryDefinition</TypeId>
+			  <SubtypeId/>
+		  </Id>
+		  <DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+		  <Name>Weapons</Name>
+		  <ItemIds>
+			  <string>ConveyorSorter/Thagomizer_Angled</string>
+		  </ItemIds>
+	  </Category> 
+  </CategoryClasses>
 </Definitions>

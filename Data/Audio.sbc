@@ -214,59 +214,66 @@
 		  </Waves>
 	  </Sound>	  
 	  
-	  
+	  <!--SoaSE Travel -->
 	  <Sound>
 		  <Id>
 			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-			  <SubtypeId>MyAssaultHit</SubtypeId>
+			  <SubtypeId>RLX10Flight</SubtypeId>
 		  </Id>
 		  <Category>SHOT</Category>
-		  <MaxDistance>3750</MaxDistance>
-		  <PreventSynchronization>0</PreventSynchronization>
+		  <MaxDistance>2000</MaxDistance>
+		  <Volume>3</Volume>
+		  <PitchVariation>10</PitchVariation>	
 		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
-		  <DynamicMusicAmount>35</DynamicMusicAmount>
-		  <Volume>0.7</Volume>
-		  <VolumeVariation>0.5</VolumeVariation>
-          <PitchVariation>100</PitchVariation>
-		  <!--<DistantSounds>
-			  <DistantSound DistanceCrossFade="10" Distance="1850" Sound = "MyAssaultDistantHit" />
-		  </DistantSounds>-->
-		  <Loopable>false</Loopable>
+		  <DynamicMusicAmount>50</DynamicMusicAmount>
 		  <Waves>
 			  <Wave Type="D3">
-				  <Start>Audio\Crunch\AssaultCannonDistantHit.wav</Start>
+				  <Start>Audio\ShellFlight\ThanatosWhistle.wav</Start>
 			  </Wave>
 		  </Waves>
 	  </Sound>
-	  <!--<Sound>
+	  	  <Sound>
 		  <Id>
 			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-			  <SubtypeId>MyAssaultDistantHit</SubtypeId>
+			  <SubtypeId>RLX10FlightB</SubtypeId>
 		  </Id>
 		  <Category>SHOT</Category>
-		  <MaxDistance>3750</MaxDistance>
-		  <PreventSynchronization>0</PreventSynchronization>
+		  <MaxDistance>1200</MaxDistance>
+		  <Volume>6</Volume>
+		  <PitchVariation>100</PitchVariation>	
 		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
-		  <DynamicMusicAmount>35</DynamicMusicAmount>
-		  <Volume>1</Volume>
-		  <Loopable>false</Loopable>
+		  <DynamicMusicAmount>50</DynamicMusicAmount>
 		  <Waves>
 			  <Wave Type="D3">
-				  <Start>Audio\Crunch\AssaultCannonDistantHit.wav</Start>
+				  <Start>Audio\Shot\coilbatterytestsound.wav</Start>
 			  </Wave>
 		  </Waves>
-	  </Sound>-->
+	  </Sound>	
+	  <!--RL10x shield hit? -->
+	  	  <Sound>
+		  <Id>
+			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			  <SubtypeId>RLX10Shot</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>7000</MaxDistance>
+		  <PreventSynchronization>2</PreventSynchronization>
 
+			  
+			  
+		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+		  <DynamicMusicAmount>50</DynamicMusicAmount>
+		  <Volume>12</Volume>
+		  <!-- <VolumeVariation>0.5</VolumeVariation>-->
+		  <PitchVariation>80</PitchVariation>
+		  <Waves>
+			  <Wave Type="D3">
+				  <Start>Audio\Crunch\ThanksWyseman.wav</Start>
+			  </Wave>
 
+		  </Waves>
+	  </Sound>
 
-
-
-	  
-	  
-	  
-
-	  
-	  
 	  
 
 	  <!--LBX5 shot-->
@@ -391,7 +398,106 @@
 			  </Wave>
 		  </Waves>
 	  </Sound>
-	  
+
+
+		  <!--RL-10x Shot Sound -->	  
+	  	  <Sound>
+		  <Id>
+			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			  <SubtypeId>RLXLargeShot</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>9000</MaxDistance>
+		  <PreventSynchronization>2</PreventSynchronization>
+		  <DistantSounds>
+			  <DistantSound DistanceCrossfade="50" Distance="900" Sound="RLXLargeShotDistA" />
+			  <DistantSound DistanceCrossfade="100" Distance="3600" Sound="RLXLargeShotDistB" />			 
+			  
+		  </DistantSounds>
+		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+		  <DynamicMusicAmount>50</DynamicMusicAmount>
+		  <Volume>8</Volume>
+		  <!-- <VolumeVariation>0.5</VolumeVariation>-->
+		  <PitchVariation>80</PitchVariation>
+		  <Waves>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\AvalancheSpecialSauce1.wav</Start>
+			  </Wave>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\AvalancheSpecialSauce2.wav</Start>
+			  </Wave>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\AvalancheSpecialSauce3.wav</Start>
+			  </Wave>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\AvalancheSpecialSauce4.wav</Start>
+			  </Wave>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\AvalancheSpecialSauce5.wav</Start>
+			  </Wave>
+		  </Waves>
+	  </Sound>
+	  <Sound>
+		  <Id>
+			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			  <SubtypeId>RLXLargeShotDistA</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>9000</MaxDistance>
+		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+		  <DynamicMusicAmount>35</DynamicMusicAmount>
+		  <Volume>4</Volume>
+		  <!-- <VolumeVariation>0.5</VolumeVariation>-->
+		  <PitchVariation>80</PitchVariation>
+		  <Waves>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\DistantAvalancheSpecialSauce1.wav</Start>
+			  </Wave>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\DistantAvalancheSpecialSauce2.wav</Start>
+			  </Wave>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\DistantAvalancheSpecialSauce3.wav</Start>
+			  </Wave>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\DistantAvalancheSpecialSauce4.wav</Start>
+			  </Wave>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\DistantAvalancheSpecialSauce5.wav</Start>
+			  </Wave>
+		  </Waves>
+	  </Sound>
+	  <Sound>
+		  <Id>
+			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			  <SubtypeId>RLXLargeShotDistB</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>9000</MaxDistance>
+
+
+		  <Volume>2</Volume>
+		  <!-- <VolumeVariation>0.5</VolumeVariation>-->
+		  <PitchVariation>80</PitchVariation>
+		  <Waves>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\DistantAvalancheSpecialSauce1.wav</Start>
+			  </Wave>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\DistantAvalancheSpecialSauce2.wav</Start>
+			  </Wave>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\DistantAvalancheSpecialSauce3.wav</Start>
+			  </Wave>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\DistantAvalancheSpecialSauce4.wav</Start>
+			  </Wave>
+			  <Wave Type="D3">
+				  <Start>Audio\Shot\DistantAvalancheSpecialSauce5.wav</Start>
+			  </Wave>
+		  </Waves>
+	  </Sound>
+
 	  
 	  <!--Vanilla Impact Sounds-->
 

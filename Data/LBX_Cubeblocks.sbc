@@ -9,13 +9,10 @@
 			  <SubtypeId>JN_175Fixed</SubtypeId>
 		  </Id>
 		  <DisplayName>Naval LB-5X</DisplayName>
-		  <Description>Now this is a weapon God would use to shoot somebody - Sun Zu.
-		  6.5km Range, 3 ammo types.
-		  Due to Presence of Smart Munitions, the Weapon Requires a Weaponcore Lock on a hostile Grid to fire, and that the muzzle cannot be buried more than 2 blocks deep in a ship.
-		  --Ammo Types:
-		  +Solid Slug - Kinetic Damage, High Recoil, High Impulse, Slow Velocity. 850m/s
+		  <Description>
+		  12km Range, 2 ammo types.
 		  +High Explosive - Energy Damage 2km Blast Zone, please use with caution. 1100m/s
-		  +Cluster Shot - Kinetic Damage, Smart Proxi Fused Cluster Round that fires a shotgun blast at the enemy when it gets close. 1800m/s
+		  +Cluster Shot - Kinetic Damage, shotgun blast. 1800m/s
 		  
 		  </Description>
 		  <Icon>Textures\GUI\Icons\Cubes\LBX5.dds</Icon>
@@ -48,7 +45,7 @@
 		  <MirroringZ>Y</MirroringZ>
 		  <BlockPairName>YourBlockPairName</BlockPairName>
 		  <EdgeType>Light</EdgeType>
-		  <BuildTimeSeconds>125</BuildTimeSeconds>
+		  <BuildTimeSeconds>180</BuildTimeSeconds>
 		  <DisassembleRatio>5</DisassembleRatio>
 		  <NavigationDefinition>Default</NavigationDefinition>
 		  <WeaponDefinitionId Subtype="JN_175Fixed" />
@@ -67,10 +64,163 @@
 		  <MaxFov>1.1</MaxFov>
 	  </Definition>
 
+	  <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+		  <Id>
+			  <TypeId>ConveyorSorter</TypeId>
+			  <SubtypeId>Thagomizer</SubtypeId>
+		  </Id>
+		  <DisplayName>Naval RL-10X</DisplayName>
+		  <Description>
+			  10 Barrels of High Explosive Rockets
+			  500m minimum range, 9000m max
+			  Energy Damage
+
+		  </Description>
+		  <Icon>Textures\GUI\Icons\Cubes\jnick.dds</Icon>
+		  <CubeSize>Large</CubeSize>
+		  <GuiVisible>true</GuiVisible>
+		  <BlockTopology>TriangleMesh</BlockTopology>
+		  <Size x="3" y="8" z="3"/>
+		  <ModelOffset x="0" y="0" z="0" />
+		  <Model>Models\Cubes\Thagomizer.mwm</Model>
+		  <Components>
+			  <Component Subtype="Construction" Count="4000" />
+			  <Component Subtype="GravityGenerator" Count="50" />
+			  <Component Subtype="Computer" Count="120" />
+			  <Component Subtype="SmallTube" Count="1060" />
+			  <Component Subtype="Motor" Count="1080" />
+			  <Component Subtype="LargeTube" Count="1200" />
+			  <Component Subtype="MetalGrid" Count="650" />
+			  <Component Subtype="Construction" Count="4000" />
+			  <Component Subtype="SteelPlate" Count="500" />
+		  </Components>
+		  <CriticalComponent Subtype="Computer" Index="0" />
+		  <MountPoints>
+			  <MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" Default="true"/>
+			  <MountPoint Side="Left" StartX="8.00" StartY="0.00" EndX="8.00" EndY="3.00"/>
+			  <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			  <MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			  <MountPoint Side="Bottom" StartX="0.00" StartY="8.00" EndX="3.00" EndY="8.00"/>
+		  </MountPoints>
+		  <MirroringY>Z</MirroringY>
+		  <MirroringZ>Y</MirroringZ>
+		  <BlockPairName>Thagomizer</BlockPairName>
+		  <EdgeType>Light</EdgeType>
+		  <BuildTimeSeconds>240</BuildTimeSeconds>
+		  <DisassembleRatio>5</DisassembleRatio>
+		  <NavigationDefinition>Default</NavigationDefinition>
+		  <WeaponDefinitionId Subtype="Thagomizer" />
+		  <ResourceSinkGroup>Defense</ResourceSinkGroup>
+		  <InventoryMaxVolume>100</InventoryMaxVolume>
+		  <MinElevationDegrees>-1</MinElevationDegrees>
+		  <MaxElevationDegrees>1</MaxElevationDegrees>
+		  <MinAzimuthDegrees>-1</MinAzimuthDegrees>
+		  <MaxAzimuthDegrees>1</MaxAzimuthDegrees>
+		  <IdleRotation>false</IdleRotation>
+		  <AiEnabled>false</AiEnabled>
+		  <MaxRangeMeters>10000</MaxRangeMeters>
+		  <RotationSpeed>0</RotationSpeed>
+		  <ElevationSpeed>0</ElevationSpeed>
+		  <MinFov>0.1</MinFov>
+		  <MaxFov>1.1</MaxFov>
+	  </Definition>
+
+	  <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+		  <Id>
+			  <TypeId>ConveyorSorter</TypeId>
+			  <SubtypeId>Thagomizer_Angled</SubtypeId>
+		  </Id>
+		  <DisplayName>Naval RL-10X</DisplayName>
+		  <Description>
+			  10 Barrels of High Explosive Content
+			  Try Armoring with 4x1s
+
+		  </Description>
+		  <Icon>Textures\GUI\Icons\Cubes\jnick.dds</Icon>
+		  <CubeSize>Large</CubeSize>
+		  <GuiVisible>true</GuiVisible>
+		  <BlockTopology>TriangleMesh</BlockTopology>
+		  <Size x="5" y="8" z="3"/>
+		  <ModelOffset x="0" y="0" z="0" />
+		  <Model>Models\Cubes\Thagomizer_Angled.mwm</Model>
+		  <Components>
+			  <Component Subtype="Construction" Count="4000" />
+			  <Component Subtype="GravityGenerator" Count="50" />
+			  <Component Subtype="Computer" Count="120" />
+			  <Component Subtype="SmallTube" Count="1060" />
+			  <Component Subtype="Motor" Count="1080" />
+			  <Component Subtype="LargeTube" Count="1200" />
+			  <Component Subtype="MetalGrid" Count="650" />
+			  <Component Subtype="Construction" Count="4000" />
+			  <Component Subtype="SteelPlate" Count="1500" />
+		  </Components>
+		  <CriticalComponent Subtype="Computer" Index="0" />
+		  <MountPoints>
+			  <MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" Default="true"/>
+			  <MountPoint Side="Left" StartX="8.00" StartY="0.00" EndX="8.00" EndY="3.00"/>
+			  <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			  <MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			  <MountPoint Side="Bottom" StartX="0.00" StartY="8.00" EndX="3.00" EndY="8.00"/>
+		  </MountPoints>
+		  <MirroringY>Z</MirroringY>
+		  <MirroringZ>Y</MirroringZ>
+		  <BlockPairName>Thagomizer1</BlockPairName>
+		  <EdgeType>Light</EdgeType>
+		  <BuildTimeSeconds>275</BuildTimeSeconds>
+		  <DisassembleRatio>5</DisassembleRatio>
+		  <NavigationDefinition>Default</NavigationDefinition>
+		  <WeaponDefinitionId Subtype="Thagomizer" />
+		  <ResourceSinkGroup>Defense</ResourceSinkGroup>
+		  <InventoryMaxVolume>100</InventoryMaxVolume>
+		  <MinElevationDegrees>-1</MinElevationDegrees>
+		  <MaxElevationDegrees>1</MaxElevationDegrees>
+		  <MinAzimuthDegrees>-1</MinAzimuthDegrees>
+		  <MaxAzimuthDegrees>1</MaxAzimuthDegrees>
+		  <IdleRotation>false</IdleRotation>
+		  <AiEnabled>false</AiEnabled>
+		  <MaxRangeMeters>10000</MaxRangeMeters>
+		  <RotationSpeed>0</RotationSpeed>
+		  <ElevationSpeed>0</ElevationSpeed>
+		  <MinFov>0.1</MinFov>
+		  <MaxFov>1.1</MaxFov>
+	  </Definition>
+	  
   </CubeBlocks>
+	
+	
+	
   <BlueprintClassEntries>
    
     <Entry Class="LargeBlocks" BlueprintSubtypeId="LargeGatlingTurret/JN_175Fixed" />
     <Entry Class="Ammo" BlueprintSubtypeId="DeU_25x184mm" />
   </BlueprintClassEntries>
+	
+	
+	<BlockVariants>
+		<BlockVariant>
+			<TypeId>ConveyorSorter</TypeId>
+			<SubtypeId>Thagomizer</SubtypeId>
+		</BlockVariant>
+		<BlockVariant>
+			<TypeId>ConveyorSorter</TypeId>
+			<SubtypeId>Thagomizer_Angled</SubtypeId>
+		</BlockVariant>
+
+
+	</BlockVariants>
+	
+	<BlockVariantGroups>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Thagomizer" />
+			<Icon>Textures\GUI\Icons\jnick.dds</Icon>
+			<DisplayName>DisplayName_BlockGroup_TurretGroup</DisplayName>
+			<Description>Description_BlockGroup_TurretGroup</Description>
+			<Blocks>
+				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="Thagomizer" />
+				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="Thagomizer_Angled" />
+			</Blocks>
+		</BlockVariantGroup>
+
+	</BlockVariantGroups>
 </Definitions>
