@@ -148,7 +148,7 @@ namespace Scripts
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = 900, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 960, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 10, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 10, // Heat generated per shot.
@@ -172,7 +172,7 @@ namespace Scripts
                     PreFiringSound = "", // Audio for warmup effect.
                     FiringSound = "RLXLargeShot", // Audio for firing.
                     FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
-                    ReloadSound = "LBXreload", // Sound SubtypeID, for when your Weapon is in a reloading state
+                    ReloadSound = "RLXreload", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "ShipGatlingNoAmmo",
                     HardPointRotationSound = "", // Audio played when turret is moving.
                     BarrelRotationSound = "",

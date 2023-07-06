@@ -256,14 +256,11 @@
 			  <SubtypeId>RLX10Shot</SubtypeId>
 		  </Id>
 		  <Category>SHOT</Category>
-		  <MaxDistance>7000</MaxDistance>
-		  <PreventSynchronization>2</PreventSynchronization>
+		  <MaxDistance>4500</MaxDistance>
+		  <PreventSynchronization>0</PreventSynchronization>
 
-			  
-			  
-		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
-		  <DynamicMusicAmount>50</DynamicMusicAmount>
-		  <Volume>12</Volume>
+			
+		  <Volume>1</Volume>
 		  <!-- <VolumeVariation>0.5</VolumeVariation>-->
 		  <PitchVariation>80</PitchVariation>
 		  <Waves>
@@ -399,6 +396,85 @@
 		  </Waves>
 	  </Sound>
 
+	  <!--RL-X reload-->
+	  <Sound>
+		  <Id>
+			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			  <SubtypeId>RLXreload</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>3200</MaxDistance>
+		  <PreventSynchronization>0</PreventSynchronization>
+		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+		  <DynamicMusicAmount>35</DynamicMusicAmount>
+		  <Volume>2</Volume>
+		  <PitchVariation>50</PitchVariation>
+		  <DistantSounds>
+			  <DistantSound Distance="40" Sound = "RLXreloadD0" />
+			  <DistantSound Distance="500" Sound = "RLXreloadD1" />
+			  <DistantSound Distance="2000" Sound = "RLXreloadD2" />
+		  </DistantSounds>
+		  <Loopable>false</Loopable>
+		  <Waves>
+			  <Wave Type="D3">
+				  <Start>Audio\RLXReloadSpecial.wav</Start>
+			  </Wave>
+		  </Waves>
+	  </Sound>
+
+	  <Sound>
+		  <Id>
+			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			  <SubtypeId>RLXreloadD0</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>3200</MaxDistance>
+		  <PreventSynchronization>0</PreventSynchronization>
+		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+		  <DynamicMusicAmount>35</DynamicMusicAmount>
+		  <Volume>1.5</Volume>
+		  <Loopable>false</Loopable>
+		  <Waves>
+			  <Wave Type="D3">
+				  <Start>Audio\RLXReloadD0.wav</Start>
+			  </Wave>
+		  </Waves>
+	  </Sound>
+
+	  <Sound>
+		  <Id>
+			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			  <SubtypeId>RLXreloadD1</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>3200</MaxDistance>
+		  <PreventSynchronization>0</PreventSynchronization>
+		  <Volume>1</Volume>
+		  <Loopable>false</Loopable>
+		  <Waves>
+			  <Wave Type="D3">
+				  <Start>Audio\RLXReloadD1.wav</Start>
+			  </Wave>
+		  </Waves>
+	  </Sound>
+
+	  <Sound>
+		  <Id>
+			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			  <SubtypeId>RLXreloadD2</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>3200</MaxDistance>
+		  <PreventSynchronization>0</PreventSynchronization>
+		  <Volume>1</Volume>
+		  <Loopable>false</Loopable>
+		  <Waves>
+			  <Wave Type="D3">
+				  <Start>Audio\RLXReloadD2.wav</Start>
+			  </Wave>
+		  </Waves>
+	  </Sound>
+	  
 
 		  <!--RL-10x Shot Sound -->	  
 	  	  <Sound>
@@ -416,7 +492,7 @@
 		  </DistantSounds>
 		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 		  <DynamicMusicAmount>50</DynamicMusicAmount>
-		  <Volume>8</Volume>
+		  <Volume>3</Volume>
 		  <!-- <VolumeVariation>0.5</VolumeVariation>-->
 		  <PitchVariation>80</PitchVariation>
 		  <Waves>
@@ -446,7 +522,7 @@
 		  <MaxDistance>9000</MaxDistance>
 		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 		  <DynamicMusicAmount>35</DynamicMusicAmount>
-		  <Volume>4</Volume>
+		  <Volume>2</Volume>
 		  <!-- <VolumeVariation>0.5</VolumeVariation>-->
 		  <PitchVariation>80</PitchVariation>
 		  <Waves>
@@ -476,7 +552,7 @@
 		  <MaxDistance>9000</MaxDistance>
 
 
-		  <Volume>2</Volume>
+		  <Volume>1</Volume>
 		  <!-- <VolumeVariation>0.5</VolumeVariation>-->
 		  <PitchVariation>80</PitchVariation>
 		  <Waves>
@@ -497,7 +573,27 @@
 			  </Wave>
 		  </Waves>
 	  </Sound>
+	  
+	  <!--Growler-->
+	  <Sound>
+		  <Id>
+			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			  <SubtypeId>GrowlerTone</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>1800</MaxDistance>
+		  <PreventSynchronization>0</PreventSynchronization>
+		  <Volume>2.5</Volume>
+		  <PitchVariation>50</PitchVariation>
+		  <Loopable>true</Loopable>
+		  <Waves>
+			  <Wave Type="D3">
 
+				  <Loop>Audio\Shellflight\GrowlToneLoop.wav</Loop>
+
+			  </Wave>
+		  </Waves>
+	  </Sound>
 	  
 	  <!--Vanilla Impact Sounds-->
 

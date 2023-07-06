@@ -274,7 +274,7 @@ namespace Scripts
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 30, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 AccelPerSec = 0f, // Meters Per Second. This is the spawning Speed of the Projectile, and used by turning.
-                DesiredSpeed = 900, // voxel phasing if you go above 5100
+                DesiredSpeed = 750, // voxel phasing if you go above 5100
                 MaxTrajectory = 13500f, // Max Distance the projectile or beam can Travel.
                 DeaccelTime = 0, // 0 is disabled, a value causes the projectile to come to rest overtime, (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 1f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
@@ -315,11 +315,11 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "LBX_Missile_Smoke", //ShipWelderArc
+                        Name = "Missile_Travel_Smoke", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 1f,
+                            Scale = 0.8f,
                         },
                     },
                     Hit = new ParticleDef
@@ -597,7 +597,7 @@ namespace Scripts
                     NoVisuals = false,
                     NoSound = false,
                     ParticleScale = 1f,
-                    CustomParticle = "LBX_Slug_Impact", // Particle SubtypeID, from your Particle SBC
+                    CustomParticle = "RLX_Impact", // Particle SubtypeID, from your Particle SBC
                     CustomSound = "LBXMyHeavyHit", // SubtypeID from your Audio SBC, not a filename
                     Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
@@ -679,7 +679,7 @@ namespace Scripts
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
                 Smarts = new SmartsDef
                 {
-                    Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
+                    Inaccuracy = 10f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
                     Aggressiveness = 2f, // controls how responsive tracking is.
                     MaxLateralThrust = 0.3f, // controls how sharp the trajectile may turn
                     TrackingDelay = 0, // Measured in Shape diameter units traveled.
@@ -801,15 +801,15 @@ namespace Scripts
             },
             AmmoAudio = new AmmoAudioDef
             {
-                TravelSound = "RLX10Flight", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
+                TravelSound = "GrowlerTone", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
                 HitSound = "VanillaImpactCat4",
                 ShotSound = "",
                 ShieldHitSound = "RLX10Shot",
                 PlayerHitSound = "",
                 VoxelHitSound = "",
                 FloatingHitSound = "",
-                HitPlayChance = 0.33f,
-                HitPlayShield = false,
+                HitPlayChance = 1f,
+                HitPlayShield = true,
             },
             Ejection = new EjectionDef // Optional Component, allows generation of Particle or Item (Typically magazine), on firing, to simulate Tank shell ejection
             {
