@@ -24,14 +24,15 @@
 		  <Model>Models\Cubes\LBX5_Main.mwm</Model>
 		  <Components>
 			  <Component Subtype="Construction" Count="2000" />
-			  <Component Subtype="GravityGenerator" Count="200" />			  
-			  <Component Subtype="Computer" Count="120" />
+			  <Component Subtype="GravityGenerator" Count="100" />			  
+
 			  <Component Subtype="SmallTube" Count="1060" />
 			  <Component Subtype="Motor" Count="1080" />
 			  <Component Subtype="LargeTube" Count="1200" />
+			  <Component Subtype="Computer" Count="120" />
 			  <Component Subtype="MetalGrid" Count="650" />
 			  <Component Subtype="Construction" Count="4000" />
-			  <Component Subtype="SteelPlate" Count="500" />
+			  <Component Subtype="SteelPlate" Count="1000" />
 		  </Components>
 		  <CriticalComponent Subtype="Computer" Index="0" />
 		  <MountPoints>
@@ -84,11 +85,12 @@
 		  <ModelOffset x="0" y="0" z="0" />
 		  <Model>Models\Cubes\Thagomizer.mwm</Model>
 		  <Components>
-			  <Component Subtype="Construction" Count="4000" />
-			  <Component Subtype="GravityGenerator" Count="50" />
-			  <Component Subtype="Computer" Count="120" />
+			  <Component Subtype="Construction" Count="8000" />
+			  <Component Subtype="GravityGenerator" Count="200" />
+
 			  <Component Subtype="SmallTube" Count="1060" />
 			  <Component Subtype="Motor" Count="1080" />
+			  <Component Subtype="Computer" Count="120" />
 			  <Component Subtype="LargeTube" Count="1200" />
 			  <Component Subtype="MetalGrid" Count="650" />
 			  <Component Subtype="Construction" Count="4000" />
@@ -145,11 +147,12 @@
 		  <ModelOffset x="0" y="0" z="0" />
 		  <Model>Models\Cubes\Thagomizer_Flipped.mwm</Model>
 		  <Components>
-			  <Component Subtype="Construction" Count="4000" />
-			  <Component Subtype="GravityGenerator" Count="50" />
-			  <Component Subtype="Computer" Count="120" />
+			  <Component Subtype="Construction" Count="8000" />
+			  <Component Subtype="GravityGenerator" Count="200" />
+
 			  <Component Subtype="SmallTube" Count="1060" />
 			  <Component Subtype="Motor" Count="1080" />
+			  <Component Subtype="Computer" Count="120" />
 			  <Component Subtype="LargeTube" Count="1200" />
 			  <Component Subtype="MetalGrid" Count="650" />
 			  <Component Subtype="Construction" Count="4000" />
@@ -206,11 +209,12 @@
 		  <ModelOffset x="0" y="0" z="0" />
 		  <Model>Models\Cubes\Thagomizer_Angled.mwm</Model>
 		  <Components>
-			  <Component Subtype="Construction" Count="4000" />
-			  <Component Subtype="GravityGenerator" Count="50" />
-			  <Component Subtype="Computer" Count="120" />
+			  <Component Subtype="Construction" Count="8000" />
+			  <Component Subtype="GravityGenerator" Count="300" />
+
 			  <Component Subtype="SmallTube" Count="1060" />
 			  <Component Subtype="Motor" Count="1080" />
+			  <Component Subtype="Computer" Count="120" />
 			  <Component Subtype="LargeTube" Count="1200" />
 			  <Component Subtype="MetalGrid" Count="650" />
 			  <Component Subtype="Construction" Count="4000" />
@@ -218,11 +222,15 @@
 		  </Components>
 		  <CriticalComponent Subtype="Computer" Index="0" />
 		  <MountPoints>
-			  <MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" Default="true"/>
-			  <MountPoint Side="Left" StartX="8.00" StartY="0.00" EndX="8.00" EndY="3.00"/>
-			  <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
-			  <MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
-			  <MountPoint Side="Bottom" StartX="0.00" StartY="8.00" EndX="3.00" EndY="8.00"/>
+			  <MountPoint Side="Back" StartX="0.50" StartY="0.00" EndX="4.50" EndY="8.00" Default="true"/>
+			  			  <MountPoint Side="Back" StartX="-0.50" StartY="0.00" EndX="4.00" EndY="4.00"/>
+			  			  <MountPoint Side="Back" StartX="1.00" StartY="4.00" EndX="5.50" EndY="8.00"/>
+			  <MountPoint Side="Front" StartX="-0.50" StartY="4.00" EndX="4.25" EndY="8.00"/>
+			  <MountPoint Side="Front" StartX="0.75" StartY="0.00" EndX="5.50" EndY="4.00"/>
+			  <MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			  <MountPoint Side="Right" StartX="0.00" StartY="5.00" EndX="3.00" EndY="8.00"/>
+			  <MountPoint Side="Top" StartX="1.50" StartY="0.00" EndX="5.50" EndY="3.00"/>
+			  <MountPoint Side="Bottom" StartX="-0.50" StartY="0.00" EndX="3.50" EndY="3.00"/>
 		  </MountPoints>
 		  <MirroringY>Z</MirroringY>
 		  <MirroringZ>Y</MirroringZ>
@@ -266,11 +274,12 @@
 		  <ModelOffset x="0" y="0" z="0" />
 		  <Model>Models\Cubes\Thagomizer_Angled_Flipped.mwm</Model>
 		  <Components>
-			  <Component Subtype="Construction" Count="4000" />
-			  <Component Subtype="GravityGenerator" Count="50" />
-			  <Component Subtype="Computer" Count="120" />
+			  <Component Subtype="Construction" Count="8000" />
+			  <Component Subtype="GravityGenerator" Count="300" />
+
 			  <Component Subtype="SmallTube" Count="1060" />
 			  <Component Subtype="Motor" Count="1080" />
+			  <Component Subtype="Computer" Count="120" />
 			  <Component Subtype="LargeTube" Count="1200" />
 			  <Component Subtype="MetalGrid" Count="650" />
 			  <Component Subtype="Construction" Count="4000" />
@@ -278,11 +287,15 @@
 		  </Components>
 		  <CriticalComponent Subtype="Computer" Index="0" />
 		  <MountPoints>
-			  <MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" Default="true"/>
-			  <MountPoint Side="Left" StartX="8.00" StartY="0.00" EndX="8.00" EndY="3.00"/>
+			  <MountPoint Side="Back" StartX="0.50" StartY="0.00" EndX="4.50" EndY="8.00" Default="true"/>
+			  			  <MountPoint Side="Front" StartX="-0.50" StartY="0.00" EndX="4.00" EndY="4.00"/>
+			  			  <MountPoint Side="Front" StartX="1.00" StartY="4.00" EndX="5.50" EndY="8.00"/>
+			  <MountPoint Side="Back" StartX="-0.50" StartY="4.00" EndX="4.25" EndY="8.00"/>
+			  <MountPoint Side="Back" StartX="0.75" StartY="0.00" EndX="5.50" EndY="4.00"/>
 			  <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
-			  <MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
-			  <MountPoint Side="Bottom" StartX="0.00" StartY="8.00" EndX="3.00" EndY="8.00"/>
+			  <MountPoint Side="Left" StartX="0.00" StartY="5.00" EndX="3.00" EndY="8.00"/>
+			  <MountPoint Side="Bottom" StartX="1.50" StartY="0.00" EndX="5.50" EndY="3.00"/>
+			  <MountPoint Side="Top" StartX="-0.50" StartY="0.00" EndX="3.50" EndY="3.00"/>
 		  </MountPoints>
 		  <MirroringY>Z</MirroringY>
 		  <MirroringZ>Y</MirroringZ>

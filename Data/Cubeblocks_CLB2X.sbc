@@ -20,11 +20,12 @@
       <Model>Models\Cubes\LB5-X.mwm</Model>
       <Components>
         <Component Subtype="Construction" Count="2000" />
-        <Component Subtype="GravityGenerator" Count="200" />
-        <Component Subtype="Computer" Count="120" />
-        <Component Subtype="SmallTube" Count="1060" />
-        <Component Subtype="Motor" Count="1080" />
+        <Component Subtype="GravityGenerator" Count="50" />
+
+        <Component Subtype="SmallTube" Count="160" />
+        <Component Subtype="Motor" Count="180" />
         <Component Subtype="LargeTube" Count="120" />
+		<Component Subtype="Computer" Count="120" />
         <Component Subtype="MetalGrid" Count="650" />
         <Component Subtype="Construction" Count="400" />
         <Component Subtype="SteelPlate" Count="400" />
