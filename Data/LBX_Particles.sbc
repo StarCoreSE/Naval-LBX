@@ -6981,9 +6981,9 @@
       <DistanceMax>7000</DistanceMax>
       <Priority>1</Priority>
     </ParticleEffect>
-	
 
-	<ParticleEffect xsi:type="ParticleEffect">
+	  <!--lbx shot -->
+	  <ParticleEffect xsi:type="ParticleEffect">
 		  <Id Type="MyObjectBuilder_ParticleEffect" Subtype="LBX_Muzzle_Flash_MediumCalibre" />
 		  <ParticleId>277404</ParticleId>
 		  <Length>4</Length>
@@ -7233,7 +7233,7 @@
 						  </Keys>
 					  </Property>
 					  <Property AnimationType="Const" Name="Life" Type="Float">
-						  <ValueFloat>2</ValueFloat>
+						  <ValueFloat>3</ValueFloat>
 					  </Property>
 					  <Property AnimationType="Const" Name="Soft particle distance scale" Type="Float">
 						  <ValueFloat>2</ValueFloat>
@@ -7351,7 +7351,7 @@
 						  <Keys>
 							  <Key>
 								  <Time>0.0264900662</Time>
-								  <ValueFloat>6</ValueFloat>
+								  <ValueFloat>12</ValueFloat>
 								  <Value2D />
 							  </Key>
 						  </Keys>
@@ -7403,7 +7403,7 @@
 						  <ValueFloat>25</ValueFloat>
 					  </Property>
 					  <Property AnimationType="Const" Name="Radius var" Type="Float">
-						  <ValueFloat>0</ValueFloat>
+						  <ValueFloat>1</ValueFloat>
 					  </Property>
 					  <Property AnimationType="Const" Name="Rotation velocity collision multiplier" Type="Float">
 						  <ValueFloat>1</ValueFloat>
@@ -7418,7 +7418,7 @@
 						  <ValueBool>true</ValueBool>
 					  </Property>
 					  <Property AnimationType="Const" Name="Camera Soft Radius" Type="Float">
-						  <ValueFloat>0</ValueFloat>
+						  <ValueFloat>50</ValueFloat>
 					  </Property>
 				  </Properties>
 			  </ParticleGeneration>
@@ -7873,7 +7873,7 @@
 						  <ValueBool>true</ValueBool>
 					  </Property>
 					  <Property AnimationType="Const" Name="Camera Soft Radius" Type="Float">
-						  <ValueFloat>0</ValueFloat>
+						  <ValueFloat>35</ValueFloat>
 					  </Property>
 				  </Properties>
 			  </ParticleGeneration>
@@ -8415,7 +8415,7 @@
 		  <Priority>1</Priority>
 	  </ParticleEffect>
 
-	<ParticleEffect xsi:type="ParticleEffect">
+	  <ParticleEffect xsi:type="ParticleEffect">
 		  <Id Type="MyObjectBuilder_ParticleEffect" Subtype="LBX_Muzzle_Flash_LargeCalibre" />
 		  <ParticleId>277405</ParticleId>
 		  <Length>4</Length>
@@ -8850,7 +8850,7 @@
 						  <ValueBool>true</ValueBool>
 					  </Property>
 					  <Property AnimationType="Const" Name="Camera Soft Radius" Type="Float">
-						  <ValueFloat>0</ValueFloat>
+						  <ValueFloat>35</ValueFloat>
 					  </Property>
 				  </Properties>
 			  </ParticleGeneration>
@@ -9305,7 +9305,7 @@
 						  <ValueBool>true</ValueBool>
 					  </Property>
 					  <Property AnimationType="Const" Name="Camera Soft Radius" Type="Float">
-						  <ValueFloat>0</ValueFloat>
+						  <ValueFloat>35</ValueFloat>
 					  </Property>
 				  </Properties>
 			  </ParticleGeneration>
@@ -9548,7 +9548,7 @@
 						  </Keys>
 					  </Property>
 					  <Property AnimationType="Const" Name="Life" Type="Float">
-						  <ValueFloat>0.6</ValueFloat>
+						  <ValueFloat>0.95</ValueFloat>
 					  </Property>
 					  <Property AnimationType="Const" Name="Soft particle distance scale" Type="Float">
 						  <ValueFloat>30</ValueFloat>
@@ -9557,7 +9557,7 @@
 						  <ValueFloat>4</ValueFloat>
 					  </Property>
 					  <Property AnimationType="Const" Name="Animation frame time" Type="Float">
-						  <ValueFloat>0.02</ValueFloat>
+						  <ValueFloat>0.03</ValueFloat>
 					  </Property>
 					  <Property AnimationType="Const" Name="Enabled" Type="Bool">
 						  <ValueBool>true</ValueBool>
@@ -9609,7 +9609,7 @@
 						  <ValueFloat>0.97</ValueFloat>
 					  </Property>
 					  <Property AnimationType="Const" Name="Life var" Type="Float">
-						  <ValueFloat>0.06</ValueFloat>
+						  <ValueFloat>0</ValueFloat>
 					  </Property>
 					  <Property AnimationType="Const" Name="Streaks" Type="Bool">
 						  <ValueBool>false</ValueBool>
@@ -9666,7 +9666,32 @@
 						  <Keys>
 							  <Key>
 								  <Time>0.0264900662</Time>
+								  <ValueFloat>4</ValueFloat>
+								  <Value2D />
+							  </Key>
+							  <Key>
+								  <Time>0.12649</Time>
 								  <ValueFloat>3</ValueFloat>
+								  <Value2D />
+							  </Key>
+							  <Key>
+								  <Time>0.2649</Time>
+								  <ValueFloat>3</ValueFloat>
+								  <Value2D />
+							  </Key>
+							  <Key>
+								  <Time>0.4649</Time>
+								  <ValueFloat>3</ValueFloat>
+								  <Value2D />
+							  </Key>
+							  <Key>
+								  <Time>0.5649</Time>
+								  <ValueFloat>3</ValueFloat>
+								  <Value2D />
+							  </Key>
+							  <Key>
+								  <Time>0.649</Time>
+								  <ValueFloat>2</ValueFloat>
 								  <Value2D />
 							  </Key>
 						  </Keys>
@@ -10100,7 +10125,7 @@
 						  </Keys>
 					  </Property>
 					  <Property AnimationType="Const" Name="Camera bias" Type="Float">
-						  <ValueFloat>0</ValueFloat>
+						  <ValueFloat>4</ValueFloat>
 					  </Property>
 					  <Property AnimationType="Animated2D" Name="Emissivity" Type="Float">
 						  <Keys>
@@ -10574,7 +10599,7 @@
 						  <ValueFloat>1</ValueFloat>
 					  </Property>
 					  <Property AnimationType="Const" Name="Radius var" Type="Float">
-						  <ValueFloat>-0.6</ValueFloat>
+						  <ValueFloat>0.2</ValueFloat>
 					  </Property>
 					  <Property AnimationType="Const" Name="Rotation velocity collision multiplier" Type="Float">
 						  <ValueFloat>1</ValueFloat>
@@ -10695,7 +10720,7 @@
 			  </ParticleLight>
 		  </ParticleLights>
 		  <DistanceMax>6000</DistanceMax>
-		  <Priority>2</Priority>
+		  <Priority>1</Priority>
 	  </ParticleEffect>
 
 	  <!--K_SA_Explosion_III , Optimized -->
@@ -12583,7 +12608,7 @@
 		  <Priority>-1</Priority>
 	  </ParticleEffect>
 
-
+	  <!--lbx slug (unused) -->
 	  <ParticleEffect xsi:type="ParticleEffect">
       <Id Type="MyObjectBuilder_ParticleEffect" Subtype="XLBX_Slug_Impact" />
       <ParticleId>277487</ParticleId>
@@ -22939,6 +22964,7 @@
 		  <DistanceMax>8000</DistanceMax>
 		  <Priority>-199</Priority>
 	  </ParticleEffect>
+	  <!--RLX HIT -->
 	  <ParticleEffect xsi:type="ParticleEffect">
 		  <Id Type="MyObjectBuilder_ParticleEffect" Subtype="RLX_Impact" />
 		  <ParticleId>277477</ParticleId>
@@ -27443,7 +27469,7 @@
 		  <DistanceMax>15000</DistanceMax>
 		  <Priority>1</Priority>
 	  </ParticleEffect>
-	  
+	  <!--lbx cluster -->
 	<ParticleEffect xsi:type="ParticleEffect">
 			  <Id Type="MyObjectBuilder_ParticleEffect" Subtype="XLBX_Cluster_Shot_Trigger" />
 			  <ParticleId>277488</ParticleId>
@@ -38214,6 +38240,7 @@
 		  <DistanceMax>7500</DistanceMax>
 		  <Priority>-201</Priority>
 	  </ParticleEffect>
+	  <!--lbx he -->
 	<ParticleEffect xsi:type="ParticleEffect">
 		  <Id Type="MyObjectBuilder_ParticleEffect" Subtype="XLBX_High_Explosive_Anti_Fleet" />
 		  <ParticleId>277486</ParticleId>
@@ -44152,6 +44179,7 @@
 		  <DistanceMax>8000</DistanceMax>
 		  <Priority>-201</Priority>
 	  </ParticleEffect>
+	  <!--lbx shot -->
 	  <ParticleEffect xsi:type="ParticleEffect">
 		  <Id Type="MyObjectBuilder_ParticleEffect" Subtype="My_LBX_Shot" />
 		  <ParticleId>277490</ParticleId>
@@ -49552,7 +49580,7 @@
 		  <DistanceMax>7500</DistanceMax>
 		  <Priority>-90</Priority>
 	  </ParticleEffect>
-
+	
 	  <ParticleEffect xsi:type="ParticleEffect">
 		  <Id Type="MyObjectBuilder_ParticleEffect" Subtype="LBX_Impact_Smoke" />
 		  <ParticleId>277413</ParticleId>

@@ -315,11 +315,11 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "Missile_Travel_Smoke", //ShipWelderArc
+                        Name = "RLX_Travel_Smoke", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 0.8f,
+                            Scale = 1f,
                         },
                     },
                     Hit = new ParticleDef
@@ -711,12 +711,13 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "Missile_Travel_Smoke", //ShipWelderArc
+                        Name = "RLX_Travel_Smoke", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1f,
                         },
+
                     },
                     Hit = new ParticleDef
                     {
@@ -808,7 +809,7 @@ namespace Scripts
                 PlayerHitSound = "",
                 VoxelHitSound = "",
                 FloatingHitSound = "",
-                HitPlayChance = 1f,
+                HitPlayChance = 0.4f,
                 HitPlayShield = true,
             },
             Ejection = new EjectionDef // Optional Component, allows generation of Particle or Item (Typically magazine), on firing, to simulate Tank shell ejection
